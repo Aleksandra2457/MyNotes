@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		D3AFE2ED27F245B5000FF27D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE2EC27F245B5000FF27D /* AppDelegate.swift */; };
 		D3AFE2EF27F245B5000FF27D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE2EE27F245B5000FF27D /* SceneDelegate.swift */; };
-		D3AFE2F127F245B5000FF27D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE2F027F245B5000FF27D /* ViewController.swift */; };
 		D3AFE2F427F245B5000FF27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AFE2F227F245B5000FF27D /* Main.storyboard */; };
 		D3AFE2F627F245B6000FF27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AFE2F527F245B6000FF27D /* Assets.xcassets */; };
 		D3AFE2F927F245B6000FF27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AFE2F727F245B6000FF27D /* LaunchScreen.storyboard */; };
 		D3AFE30727F2473B000FF27D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30627F2473B000FF27D /* Note.swift */; };
 		D3AFE30927F2474C000FF27D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30827F2474C000FF27D /* DataManager.swift */; };
+		D3AFE30B27F24E6E000FF27D /* NotesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30A27F24E6E000FF27D /* NotesListTableViewController.swift */; };
+		D3AFE30F27F276AC000FF27D /* NotesDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30E27F276AC000FF27D /* NotesDetailsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3AFE2E927F245B5000FF27D /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AFE2EC27F245B5000FF27D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AFE2EE27F245B5000FF27D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3AFE2F027F245B5000FF27D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3AFE2F327F245B5000FF27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3AFE2F527F245B6000FF27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AFE2F827F245B6000FF27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3AFE2FA27F245B6000FF27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3AFE30627F2473B000FF27D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D3AFE30827F2474C000FF27D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D3AFE30A27F24E6E000FF27D /* NotesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListTableViewController.swift; sourceTree = "<group>"; };
+		D3AFE30E27F276AC000FF27D /* NotesDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesDetailsTableViewController.swift; path = MyNotes/ViewControllers/NotesDetailsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,8 @@
 		D3AFE30127F245D8000FF27D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D3AFE2F027F245B5000FF27D /* ViewController.swift */,
+				D3AFE30A27F24E6E000FF27D /* NotesListTableViewController.swift */,
+				D3AFE30E27F276AC000FF27D /* NotesDetailsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,11 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AFE2F127F245B5000FF27D /* ViewController.swift in Sources */,
 				D3AFE30927F2474C000FF27D /* DataManager.swift in Sources */,
 				D3AFE2ED27F245B5000FF27D /* AppDelegate.swift in Sources */,
 				D3AFE2EF27F245B5000FF27D /* SceneDelegate.swift in Sources */,
 				D3AFE30727F2473B000FF27D /* Note.swift in Sources */,
+				D3AFE30F27F276AC000FF27D /* NotesDetailsTableViewController.swift in Sources */,
+				D3AFE30B27F24E6E000FF27D /* NotesListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S975MC8VZ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyNotes/Info.plist;
+				INFOPLIST_FILE = MyNotes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -377,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S975MC8VZ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyNotes/Info.plist;
+				INFOPLIST_FILE = MyNotes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
