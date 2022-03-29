@@ -7,5 +7,7 @@
 
 import Foundation
 
+// предлагаю удалить
 class DataManager {
+    
 }

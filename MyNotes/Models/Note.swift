@@ -9,7 +9,7 @@ import Foundation
 
 struct Note {
     var title = ""
-    var description = ""
+    var description: String?
     let id = UUID()
     
     static func returnExampleNote() -> Note {

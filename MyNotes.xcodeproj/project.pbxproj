@@ -13,7 +13,6 @@
 		D3AFE2F627F245B6000FF27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AFE2F527F245B6000FF27D /* Assets.xcassets */; };
 		D3AFE2F927F245B6000FF27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AFE2F727F245B6000FF27D /* LaunchScreen.storyboard */; };
 		D3AFE30727F2473B000FF27D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30627F2473B000FF27D /* Note.swift */; };
-		D3AFE30927F2474C000FF27D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30827F2474C000FF27D /* DataManager.swift */; };
 		D3AFE30B27F24E6E000FF27D /* NotesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30A27F24E6E000FF27D /* NotesListTableViewController.swift */; };
 		D3AFE30F27F276AC000FF27D /* NotesDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE30E27F276AC000FF27D /* NotesDetailsTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		D3AFE2F827F245B6000FF27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3AFE2FA27F245B6000FF27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3AFE30627F2473B000FF27D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		D3AFE30827F2474C000FF27D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D3AFE30A27F24E6E000FF27D /* NotesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListTableViewController.swift; sourceTree = "<group>"; };
 		D3AFE30E27F276AC000FF27D /* NotesDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesDetailsTableViewController.swift; path = MyNotes/ViewControllers/NotesDetailsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -62,7 +60,6 @@
 		D3AFE2EB27F245B5000FF27D /* MyNotes */ = {
 			isa = PBXGroup;
 			children = (
-				D3AFE30527F245FC000FF27D /* Services */,
 				D3AFE30427F245F4000FF27D /* Models */,
 				D3AFE30027F245CF000FF27D /* App */,
 				D3AFE30127F245D8000FF27D /* ViewControllers */,
@@ -114,14 +111,6 @@
 				D3AFE30627F2473B000FF27D /* Note.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D3AFE30527F245FC000FF27D /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				D3AFE30827F2474C000FF27D /* DataManager.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +184,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AFE30927F2474C000FF27D /* DataManager.swift in Sources */,
 				D3AFE2ED27F245B5000FF27D /* AppDelegate.swift in Sources */,
 				D3AFE2EF27F245B5000FF27D /* SceneDelegate.swift in Sources */,
 				D3AFE30727F2473B000FF27D /* Note.swift in Sources */,
