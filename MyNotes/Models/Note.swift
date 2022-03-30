@@ -10,7 +10,6 @@ import Foundation
 struct Note {
     var title = ""
     var description: String?
-    let id = UUID()
     
     static func returnExampleNote() -> Note {
         Note(title: "Моя заметка", description: "Создана 28.03.2022")

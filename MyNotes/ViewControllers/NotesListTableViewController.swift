@@ -22,10 +22,6 @@ class NotesListTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem?.image = UIImage(systemName: "line.3.horizontal")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
-    
     //MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         notes.count
@@ -71,11 +67,16 @@ class NotesListTableViewController: UITableViewController {
     
     @IBAction func unwindFor(segue: UIStoryboardSegue) {
         if segue.identifier == "SaveUnwind" {
-            guard let source = segue.source as? NotesDetailsTableViewController else { return }
-            self.note = source.note
-            notes.append(note)
+            guard let source = segue.source as? NotesDetailsTableViewController,
+                  let note = source.note else { return }
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                notes[selectedIndexPath.row] = note
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                notes.append(note)
+                tableView.reloadData()
+            }
         }
-        
     }
+    
 }
-
