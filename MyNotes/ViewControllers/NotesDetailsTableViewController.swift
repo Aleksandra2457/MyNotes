@@ -15,11 +15,12 @@ class NotesDetailsTableViewController: UITableViewController {
     
     //MARK: - Public Properties
     var note: Note!
-
+    
     //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        notesNameTextField.delegate = self
+        notesNameTextField.layer.cornerRadius = 12
+        notesDescriptionTextView.layer.cornerRadius = 12
         setupUI()
         updateSaveButtonState()
     }
@@ -36,32 +37,22 @@ class NotesDetailsTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func notesTitleIsChanged(_ sender: UITextField) {
+        updateSaveButtonState()
+    }
+    
+    //MARK: - Private Methods
     private func setupUI() {
         notesNameTextField.text = note?.title ?? ""
         notesDescriptionTextView.text = note?.description ?? ""
     }
     
-    //MARK: - Private Methods
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
     private func updateSaveButtonState() {
         guard let notesName = notesNameTextField.text,
               !notesName.isEmpty && notesName.count >= 1 else {
-                  navigationItem.rightBarButtonItem?.isEnabled = false
-                  return
-              }
+            navigationItem.rightBarButtonItem?.isEnabled = false
+            return
+        }
         navigationItem.rightBarButtonItem?.isEnabled = true
-    }
-    
-}
-
-extension NotesDetailsTableViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        updateSaveButtonState()
     }
 }
