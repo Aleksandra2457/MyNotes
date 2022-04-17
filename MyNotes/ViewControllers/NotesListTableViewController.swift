@@ -53,7 +53,7 @@ class NotesListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToChangeSelectedNote" {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
-            guard let notesDetailsVC = navigationVC.topViewController as? NotesDetailsTableViewController else { return }
+            guard let notesDetailsVC = navigationVC.topViewController as? NotesDetailsViewController else { return }
             guard let indexpath = tableView.indexPathForSelectedRow else { return }
             notesDetailsVC.note = notes[indexpath.row]
         }
@@ -67,11 +67,11 @@ class NotesListTableViewController: UITableViewController {
     
     @IBAction func unwindFor(segue: UIStoryboardSegue) {
         if segue.identifier == "SaveUnwind" {
-            guard let source = segue.source as? NotesDetailsTableViewController,
+            guard let source = segue.source as? NotesDetailsViewController,
                   let note = source.note else { return }
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 notes[selectedIndexPath.row] = note
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+                tableView.reloadRows(at: [selectedIndexPath], with: .automatic)
             } else {
                 notes.append(note)
                 tableView.reloadData()
