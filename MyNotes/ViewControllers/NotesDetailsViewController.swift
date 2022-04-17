@@ -20,7 +20,13 @@ class NotesDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         notesDescriptionTextView.layer.cornerRadius = 5
-        notesDescriptionTextView.layer.borderWidth = 0.1
+        notesDescriptionTextView.layer.borderWidth = 0.2
+        notesDescriptionTextView.layer.borderColor = UIColor(
+            red: 142/255,
+            green: 142/255,
+            blue: 142/255,
+            alpha: 1
+        ).cgColor
         setupUI()
         updateSaveButtonState()
         notesNameTextField.addTarget(self, action: #selector(updateSaveButtonState), for: .editingChanged)

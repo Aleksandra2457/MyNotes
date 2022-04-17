@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MMB-6Z-VbJ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,11 +53,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Заметки" largeTitleDisplayMode="always" id="9h1-t2-VxA">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="ipb-5h-pue">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
                             <connections>
                                 <action selector="editBarButtonPressedWithSender:" destination="clx-CH-JeQ" id="kRS-E3-MZQ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Ona-oP-tfc">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
                             <connections>
                                 <segue destination="TbU-pP-gb1" kind="presentation" modalPresentationStyle="fullScreen" id="fFk-3w-EVd"/>
                             </connections>
@@ -118,7 +121,6 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pfO-Mx-Pp0">
                                 <rect key="frame" x="16" y="176" width="382" height="646"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -138,6 +140,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wAb-gb-wJT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="wVu-3I-ubY" firstAttribute="top" secondItem="wAb-gb-wJT" secondAttribute="top" constant="5" id="2Rj-2t-bmT"/>
                             <constraint firstItem="wAb-gb-wJT" firstAttribute="bottom" secondItem="pfO-Mx-Pp0" secondAttribute="bottom" constant="40" id="7XM-gl-3Ai"/>
@@ -156,11 +159,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="9hf-6Q-nKz">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dvN-CZ-nKI">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
                             <connections>
                                 <action selector="cancelButtonPressed" destination="LVv-YW-YAe" id="5g8-6X-Yl7"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="4bg-XL-8Jg">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
                             <connections>
                                 <segue destination="Mbu-zt-kAH" kind="unwind" identifier="SaveUnwind" unwindAction="unwindForSegue:" id="22f-ji-hif"/>
                             </connections>
@@ -180,13 +185,18 @@
     <inferredMetricsTieBreakers>
         <segue reference="cQp-LX-5k9"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
