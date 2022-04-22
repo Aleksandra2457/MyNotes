@@ -19,8 +19,8 @@ class TemplateDataManager {
     func createTemplateData(completion: @escaping() -> Void) {
         if !UserDefaults.standard.bool(forKey: "templateDataHasBeenLoaded") {
             CoreDataManager.shared.create(
-                "Тестовая заметка",
-                "Ее можно удалить при помощи свайпа справа налево и при помощи кнопки слева наверху"
+                "Это тестовая заметка",
+                "Ее можно удалить или отредактировать"
             )
             UserDefaults.standard.set(true, forKey: "templateDataHasBeenLoaded")
             completion()

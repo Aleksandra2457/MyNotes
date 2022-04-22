@@ -47,7 +47,7 @@ class NotesListTableViewController: UITableViewController {
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let note = notes.remove(at: indexPath.row)
@@ -66,6 +66,7 @@ class NotesListTableViewController: UITableViewController {
         showAlert()
     }
     
+    // MARK: - Private Methods
     private func save(notesTitle: String, notesSubtitle: String) {
         CoreDataManager.shared.create(notesTitle, notesSubtitle) { note in
             self.notes.append(note)
@@ -75,7 +76,7 @@ class NotesListTableViewController: UITableViewController {
             )
         }
     }
-
+    
     private func fetchData() {
         CoreDataManager.shared.fetchData { result in
             switch result {
@@ -104,7 +105,6 @@ extension NotesListTableViewController {
                 self.save(notesTitle: notesTitle, notesSubtitle: notesSubtitle)
             }
         }
-        
         present(alert, animated: true)
     }
 }

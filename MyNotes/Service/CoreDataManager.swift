@@ -69,7 +69,7 @@ class CoreDataManager {
         viewContext.delete(note)
         saveContext()
     }
-
+    
     // MARK: - Core Data Saving support
     func saveContext() {
         if viewContext.hasChanges {
